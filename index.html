@@ -1,0 +1,47 @@
+<html>
+
+<body>
+   <div id="app"></div>
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+   <script src="https://fb.me/react-15.0.1.js"></script>
+   <script src="https://fb.me/react-dom-15.0.1.js"></script>
+
+   <script type="text/javascript" src="dist/SearchingBox.js"></script>
+
+   <link href="css/searchingBox.css" rel="stylesheet" type="text/css" media="all" />
+   <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+   <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+
+</body>
+<script>
+
+let tabs = [
+   {
+      text: 'File',
+      color: '#F35B5B',
+      placeholder: 'Tutti i file e cartelle'
+   }, {
+      text: 'Immagini',
+      color: '#5DADF7',
+      placeholder: 'Tutte le immagini'
+   }, {
+      text: 'Video',
+      color: '#FF6D21',
+      placeholder: 'Tutti i video'
+   }, {
+      text: 'Musica',
+      color: '#47B74C',
+      placeholder: 'Tutta la musica'
+   }
+]
+
+let search = function(search) {
+   console.log(search)
+}
+
+ReactDOM.render(React.createElement(SearchingBox, { tabs: tabs, onSearch: search }), document.getElementById('app'));
+
+</script>
+</html>
